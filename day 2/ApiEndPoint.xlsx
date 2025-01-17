@@ -1,0 +1,64 @@
+Method: GET
+Description: Fetch all available product categories stored in Sanity.
+Response:
+
+
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Devices and gadgets",
+    "image": "https://abc.com/electronics.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Clothing",
+    "description": "Apparel for men, women, and children",
+    "image": "https://abc.com/clothing.jpg"
+  }
+]
+Endpoint Name: /add-review
+Method: POST
+Description: Save a new product review in Sanity, including customer details, product ID, and review content.
+Payload:
+
+
+{
+  "customerId": "CUST12345",
+  "productId": 1,
+  "rating": 4.5,
+  "comment": "Excellent product with great quality!",
+  "date": "2025-01-17"
+}
+Endpoint Name: /discounts
+Method: GET
+Description: Retrieve all active discounts and promotional offers.
+Response:
+
+
+[
+  {
+    "discountId": "DIS123",
+    "productId": 1,
+    "discountPercentage": 10,
+    "validUntil": "2025-02-01"
+  },
+  {
+    "discountId": "DIS124",
+    "category": "Electronics",
+    "discountPercentage": 15,
+    "validUntil": "2025-01-31"
+  }
+]
+Endpoint Name: /track-payment
+Method: GET
+Description: Check the current status of a payment using a third-party payment gateway API.
+Response:
+ 
+{
+  "paymentId": "PAY12345",
+  "orderId": "ORD12345",
+  "status": "Success",
+  "transactionDate": "2025-01-15",
+  "amount": 200
+}
